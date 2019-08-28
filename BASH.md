@@ -3,11 +3,7 @@ Commands
 
 Locate
 ------------
-Pipe through grep
+Pipe through grep in current directory
 
 $ locate less | grep ^/bin
-/bin/bzless
-/bin/less
-
-cd /home/tim/science
-locate math | grep `pwd`
+$ locate math | grep `pwd`

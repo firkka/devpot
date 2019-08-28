@@ -1,5 +1,8 @@
-# locate
+Commands
+===================
 
+Locate
+------------
 Pipe through grep
 
 $ locate less | grep ^/bin

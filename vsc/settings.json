@@ -1,0 +1,51 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry":     false,
+
+    "git.ignoreMissingGitWarning": true,
+
+    "window.zoomLevel": 2,
+    "window.menuBarVisibility": "toggle",
+
+    "files.trimTrailingWhitespace": true,
+
+    "editor.renderWhitespace": "all",
+
+    "editor.minimap.enabled": true,
+
+    "editor.overviewRulerBorder": false,
+
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": false,
+
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorCustomizations":
+    {
+        "editor.selectionBackground":          "#b939b1", //135564
+        "editor.selectionHighlightBackground": "#b857b3",
+        "editorLineNumber.foreground":         "#999",
+        "editorWhitespace.foreground":         "#bdbaba88",
+        "scrollbarSlider.background":          "#302ebea2",
+
+        "tab.unfocusedInactiveForeground": "#fdfdfd",
+        "tab.unfocusedActiveForeground": "#8bff8b",
+        // "tab.unfocusedActiveBackground": "#8e8e8e",
+
+        "tab.inactiveForeground": "#fdfdfd",
+
+        // "tab.activeBackground": "#ffffff",
+        "tab.activeForeground": "#8bff8b"
+    },
+
+    "C_Cpp.dimInactiveRegions": true,
+    "C_Cpp.inactiveRegionBackgroundColor": null,
+    "C_Cpp.inactiveRegionForegroundColor": null,
+    "C_Cpp.inactiveRegionOpacity": 0.55,
+
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+
+    "terminal.integrated.shell.windows": "C:\\cygwin64\\Cygwin.bat",
+
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.sideBar.location": "left",
+}

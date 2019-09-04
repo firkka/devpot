@@ -3,6 +3,8 @@
 
 
 /*
+    C++ Weekly - E2 Cost of Using Statics
+
     gcc.godbolt.org
 
     Compiler : x86-64 gcc 5.3 -std=c++14 -Wall, Deactivated : 11010, Intel

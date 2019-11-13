@@ -1,0 +1,7 @@
+    
+    // Linux like path extension
+    ,{
+        "key": "shift+alt+oem_5",
+        "command": "copyabsolutepath",
+        "when": "editorTextFocus"
+    }

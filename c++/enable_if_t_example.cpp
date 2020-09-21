@@ -1,33 +1,31 @@
 #include <iostream>
 
-class Jeppis
+class MyClass
 {
 public:
     enum { int_t,float_t } m_type;
 
-
-    template <typename Integer,
-              std::enable_if_t<std::is_integral<Integer>::value, int> = 0>
-    Jeppis(Integer) : m_type(int_t)
+    template <typename Int,
+              std::enable_if_t<std::is_integral<Int>::value, int> = 0>
+    MyClass(Int) : m_type(int_t)
     {
-
     }
  
-    template <typename Floating,
-              std::enable_if_t<std::is_floating_point<Floating>::value, int> = 0>
-    Jeppis(Floating) : m_type(float_t)
+    template <typename Fp,
+              std::enable_if_t<std::is_floating_point<Fp>::value, int> = 0>
+    MyClass(Fp) : m_type(float_t)
     {
-
     }
 };
 
 int main(void)
 {
-    Jeppis j(1);
-    Jeppis k(1.0);
+    MyClass j(1);
 
-    printf("\n j : %d\n", j.m_type); // 0
-    printf("\n k : %d\n", k.m_type); // 1
+    MyClass k(1.0);
+
+    printf("\n j : %d\n", j.m_type);
+    printf("\n k : %d\n", k.m_type);
 
     return 0;
 }

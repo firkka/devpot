@@ -9,12 +9,14 @@ public:
               std::enable_if_t<std::is_integral<Int>::value, int> = 0>
     MyClass(Int) : m_type(int_t)
     {
+        printf("MyClass Int\n");
     }
  
     template <typename Fp,
               std::enable_if_t<std::is_floating_point<Fp>::value, int> = 0>
     MyClass(Fp) : m_type(float_t)
     {
+        printf("MyClass Fp\n");
     }
 };
 
@@ -34,18 +36,18 @@ int main(void)
 
     MyClass k(1.0);
 
-    printf("\n j : %d, k : %d ", j.m_type, k.m_type); // j : 0, k : 1 
+    printf("\n j : %d, k : %d ", j.m_type, k.m_type);
 
     int w1 = std::is_floating_point<float>::value;
     int w2 = std::is_floating_point<int>::value;
 
-    printf("\n w1 %d: w2 %d\n", w1, w2); // w1 1: w2 0
+    printf("\n w1 %d: w2 %d\n", w1, w2);
 
     int w = std::enable_if_t<std::is_integral<int>::value, int>();
     if (w) printf("w defined\n");
 
     int r = std::enable_if_t<std::is_integral<int>::value, int>(1.0);
-    if (r) printf("r defined %d \n", r); // defined as int
+    if (r) printf("r defined %d \n", r);
 
     foo<int>();
     foo<float>();
@@ -53,3 +55,23 @@ int main(void)
 
     return 0;
 }
+
+/*
+
+MyClass Int
+
+MyClass Fp
+
+
+ j : 0, k : 1 
+
+ w1 1: w2 0
+
+r defined 1 
+
+foo int
+
+foo float
+
+
+*/
